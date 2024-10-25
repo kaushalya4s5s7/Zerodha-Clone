@@ -1,0 +1,36 @@
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hidden {
+  opacity: 0; /* Make it invisible */
+  transform: translateY(20px); /* Shift it down */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for animation */
+}
+
+.show {
+  opacity: 1; /* Make it visible */
+  transform: translateY(0); /* Move to original position */
+}
+
+.show-right {
+  animation: slideInRight 1s forwards; /* Animation for right side elements */
+}

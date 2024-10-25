@@ -54,6 +54,43 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.nav-link {
+  margin-left: 40px;
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.show {
+  animation: slideInLeft 1s forwards; /* Animation for the left side elements */
+}
+
+.show-right {
+  animation: slideInRight 1s forwards; /* Animation for the right side elements */
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
